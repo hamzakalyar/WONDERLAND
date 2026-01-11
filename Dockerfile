@@ -19,7 +19,8 @@ COPY . /app/
 RUN python manage.py collectstatic --noinput
 
 # Expose port 8000
-EXPOSE 8000
+EXPOSE 7860
 
 # Run gunicorn
 CMD ["gunicorn", "--bind", "0.0.0.0:8000", "toystore.wsgi:application"]
+
